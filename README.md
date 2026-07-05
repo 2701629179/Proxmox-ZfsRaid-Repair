@@ -41,26 +41,31 @@
 
 为了让您随时随地在终端调用本工具，我们提供了一键安装指令。该指令会将脚本拷贝到系统的全局执行路径 `/usr/local/bin/` 下，赋予权限，并注册系统变量。
 
-### 安装命令
-在 PVE 终端下执行以下一键安装指令：
+## ⚡ 快速开始
+
+### 一键运行（推荐）
+
 ```bash
-# 1. 复制脚本至全局系统变量路径
-cp /root/zfs_repair.sh /usr/local/bin/zfsrepair
-
-# 2. 赋予全局可执行权限
-chmod +x /usr/local/bin/zfsrepair
-
-# 3. 重新加载系统环境变量
-hash -r
+bash <(curl -sSL https://gitee.com/liushuheng-666/Proxmox-ZfsRaid-Repair/releases/download/PveZfs/PveZfs.sh)
 ```
 
-### 启动方式
-安装成功后，在终端的**任意目录下**输入以下命令，即可直接唤醒并运行本工具：
+> 如运行不了请执行 `which yum && yum install -y curl || apt update && apt install -y curl` 安装curl。
+
+### 从源码运行
+
 ```bash
-PveZfs.sh
+# 1. 下载脚本
+wget https://gitee.com/liushuheng-666/Proxmox-ZfsRaid-Repair/releases/download/PveZfs/PveZfs.sh
+
+# 2. 赋予执行权限
+chmod +x PveZfs.sh
+
+# 3. 运行
+./PveZfs.sh
 ```
 
 ---
+
 
 ## 🎨 终端彩色高亮区分规则 (对新手小白极其友好)
 
@@ -147,10 +152,10 @@ PveZfs.sh
 ## 📂 项目包内文件结构与映射
 
 当您获取到 `文档.zip` 后，其内容与您本地文件夹的映射关系如下：
-*   `zfs_docs/README.md`：本项目说明文档（即本页面）。
-*   `zfs_docs/zfs_repair.sh`：ZFS 极速修复工具脚本。
-*   `zfs_docs/images/1_menu.png`：主菜单操作截图。
-*   `zfs_docs/images/2_scan.png`：物理磁盘列表与热插拔时间截图。
-*   `zfs_docs/images/3_replace.png.txt.png`：主动替换硬盘交互截图。
-*   `zfs_docs/images/4_rebuild.png.txt.png`：重构存储池命令行截图。
-*   `zfs_docs/images/5_pve_gui.png`：PVE 网页端同步拓扑截图。
+*   `README.md`：本项目说明文档（即本页面）。
+*   `zfs_repair.sh`：ZFS 极速修复工具脚本。
+*   `images/1_menu.png`：主菜单操作截图。
+*   `images/2_scan.png`：物理磁盘列表与热插拔时间截图。
+*   `images/3_replace.png`：主动替换硬盘交互截图。
+*   `images/4_rebuild.png`：重构存储池命令行截图。
+*   `images/5_pve_gui.png`：PVE 网页端同步拓扑截图。
